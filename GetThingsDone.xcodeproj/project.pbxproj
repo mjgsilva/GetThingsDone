@@ -13,6 +13,7 @@
 		ACBB8DAB1A8540EB00CDD35D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACBB8DAA1A8540EB00CDD35D /* Images.xcassets */; };
 		ACBB8DAE1A8540EB00CDD35D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACBB8DAC1A8540EB00CDD35D /* LaunchScreen.xib */; };
 		ACBB8DBA1A8540EB00CDD35D /* GetThingsDoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB8DB91A8540EB00CDD35D /* GetThingsDoneTests.swift */; };
+		ACDF601D1A8D4CEF00E9DB3A /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDF601C1A8D4CEE00E9DB3A /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		ACBB8DB31A8540EB00CDD35D /* GetThingsDoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetThingsDoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACBB8DB81A8540EB00CDD35D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACBB8DB91A8540EB00CDD35D /* GetThingsDoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThingsDoneTests.swift; sourceTree = "<group>"; };
+		ACDF601C1A8D4CEE00E9DB3A /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				ACBB8DA71A8540EB00CDD35D /* Main.storyboard */,
 				ACBB8DAA1A8540EB00CDD35D /* Images.xcassets */,
 				ACBB8DAC1A8540EB00CDD35D /* LaunchScreen.xib */,
+				ACDF601C1A8D4CEE00E9DB3A /* ChecklistItem.swift */,
 				ACBB8DA11A8540EB00CDD35D /* Supporting Files */,
 			);
 			path = GetThingsDone;
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACBB8DA61A8540EB00CDD35D /* ChecklistViewController.swift in Sources */,
+				ACDF601D1A8D4CEF00E9DB3A /* ChecklistItem.swift in Sources */,
 				ACBB8DA41A8540EB00CDD35D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
