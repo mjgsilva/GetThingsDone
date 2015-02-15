@@ -20,9 +20,17 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     
     weak var delegate: AddItemViewControllerDelegate?
     
+    var itemToEdit: ChecklistItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 44
+        
+        if let item = itemToEdit {
+            title = "Edit Item"
+            textField.text = item.text
+            doneBarButton.enabled = true
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
