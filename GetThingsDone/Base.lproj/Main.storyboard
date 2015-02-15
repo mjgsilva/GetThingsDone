@@ -57,7 +57,7 @@
         <!--Add Item-->
         <scene sceneID="cNb-2C-DLV">
             <objects>
-                <tableViewController id="mfr-2I-qq7" customClass="AddItemViewController" customModule="GetThingsDone" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mfr-2I-qq7" customClass="ItemDetailViewController" customModule="GetThingsDone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="hDn-5o-FyA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
