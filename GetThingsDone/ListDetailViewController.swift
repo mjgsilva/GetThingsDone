@@ -10,13 +10,11 @@ import UIKit
 
 protocol ListDetailViewControllerDelegate: class {
     func listDetailViewControllerDidCancel(controller: ListDetailViewController)
-    func listDetailViewController(controller: ListDetailViewController,
-        didFinishAddingChecklist checklist: Checklist)
-    func listDetailViewController(controller: ListDetailViewController,
-            didFinishEditingChecklist checklist: Checklist)
+    func listDetailViewController(controller: ListDetailViewController, didFinishAddingChecklist checklist: Checklist)
+    func listDetailViewController(controller: ListDetailViewController, didFinishEditingChecklist checklist: Checklist)
 }
 
-class ListDetailViewController: UITableViewController {
+class ListDetailViewController: UITableViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
@@ -59,27 +57,13 @@ class ListDetailViewController: UITableViewController {
         }
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
-    
     override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
         return nil
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
         let oldText: NSString = textField.text
         let newText: NSString = oldText.stringByReplacingCharactersInRange(range, withString: string)
-        
         doneBarButton.enabled = (newText.length > 0)
         return true
     }
