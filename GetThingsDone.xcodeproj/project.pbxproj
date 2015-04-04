@@ -89,6 +89,7 @@
 		ACBB8DA01A8540EA00CDD35D /* GetThingsDone */ = {
 			isa = PBXGroup;
 			children = (
+				AC4199071ACC948F00451479 /* DataModel.swift */,
 				AC4BA4FB1AC0E01100628C6C /* Checklist.swift */,
 				AC4BA4F91ABF486E00628C6C /* AllListsViewController.swift */,
 				AC4199051AC7628600451479 /* ListDetailViewController.swift */,
@@ -100,7 +101,6 @@
 				ACBB8DAA1A8540EB00CDD35D /* Images.xcassets */,
 				ACBB8DAC1A8540EB00CDD35D /* LaunchScreen.xib */,
 				ACBB8DA11A8540EB00CDD35D /* Supporting Files */,
-				AC4199071ACC948F00451479 /* DataModel.swift */,
 			);
 			path = GetThingsDone;
 			sourceTree = "<group>";

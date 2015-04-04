@@ -18,13 +18,18 @@ class Checklist: NSObject, NSCoding {
         super.init()
     }
     
+    init(name: String) {
+        self.name = name
+        super.init()
+    }
+    
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeObject(name, forKey: "Name")
         aCoder.encodeObject(items, forKey: "Items")
     }
     
-    init(name: String) {
-        self.name = name
-        super.init()
+    func countUncheckedItems() -> Int {
+        return reduce(items, 0) { cnt, item in cnt + (item.checked ? 0 : 1) }
     }
+    
 }
