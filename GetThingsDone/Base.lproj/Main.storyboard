@@ -46,8 +46,8 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4id-lB-roW" id="O2v-86-92z">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-Qd-HrU">
-                                            <rect key="frame" x="38" y="11" width="553" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnH-Qd-HrU">
+                                            <rect key="frame" x="40" y="11" width="493" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -59,6 +59,11 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="centerY" secondItem="rnH-Qd-HrU" secondAttribute="centerY" id="akM-MP-d1h"/>
+                                        <constraint firstAttribute="trailing" secondItem="rnH-Qd-HrU" secondAttribute="trailing" id="fzn-Ka-JY8"/>
+                                        <constraint firstItem="rnH-Qd-HrU" firstAttribute="leading" secondItem="O2v-86-92z" secondAttribute="leading" constant="40" id="lDF-k8-wr9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="Nce-fq-arc" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="0JU-Mp-V40"/>
@@ -98,8 +103,11 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QCK-cO-oXH" id="tUB-W0-nmm">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFE-9e-7yI">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFE-9e-7yI">
                                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="aWf-or-2pt"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -108,6 +116,11 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ZFE-9e-7yI" secondAttribute="trailing" constant="8" id="WFM-5R-3Zt"/>
+                                                <constraint firstItem="ZFE-9e-7yI" firstAttribute="top" secondItem="tUB-W0-nmm" secondAttribute="top" constant="7" id="uzh-Zk-D8m"/>
+                                                <constraint firstItem="ZFE-9e-7yI" firstAttribute="leading" secondItem="tUB-W0-nmm" secondAttribute="leading" constant="8" id="xMT-tb-dra"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -155,7 +168,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dql-4X-MJW" id="tcI-pn-J8z">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the list" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-OY-lXx">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the list" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-OY-lXx">
                                                     <rect key="frame" x="8" y="13" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -165,6 +178,11 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="CTa-OY-lXx" secondAttribute="trailing" constant="8" id="Gmt-rO-1Xh"/>
+                                                <constraint firstItem="CTa-OY-lXx" firstAttribute="leading" secondItem="tcI-pn-J8z" secondAttribute="leading" constant="8" id="ROr-pZ-dUy"/>
+                                                <constraint firstItem="CTa-OY-lXx" firstAttribute="top" secondItem="tcI-pn-J8z" secondAttribute="top" constant="13" id="tSf-XS-NWy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -252,4 +270,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="0JU-Mp-V40"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.98431372549999996" green="0.62745098040000002" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
