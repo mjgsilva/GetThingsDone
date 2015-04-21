@@ -27,7 +27,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistItem") as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ChecklistItem") as! UITableViewCell
         
         let item = checklist.items[indexPath.row]
         
@@ -58,13 +58,13 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
     
     func configureTextForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
-        let label = cell.viewWithTag(1000) as UILabel
+        let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
     }
     
     func configureCheckmarkForCell(cell: UITableViewCell, withChecklistItem item: ChecklistItem) {
         
-        let label = cell.viewWithTag(1001) as UILabel
+        let label = cell.viewWithTag(1001) as! UILabel
         label.tintColor = view.tintColor
         
         if item.checked {
@@ -101,14 +101,14 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "AddItem" {
-            let navigationController = segue.destinationViewController as UINavigationController
-            let controller = navigationController.topViewController as ItemDetailViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! ItemDetailViewController
             controller.delegate = self
         } else if segue.identifier == "EditItem" {
-            let navigationController = segue.destinationViewController as UINavigationController
-            let controller = navigationController.topViewController as ItemDetailViewController
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! ItemDetailViewController
             controller.delegate = self
-            if let indexPath = tableView.indexPathForCell(sender as UITableViewCell) {
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell) {
                 controller.itemToEdit = checklist.items[indexPath.row]
             }
         }
