@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZRI-v8-qIH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZRI-v8-qIH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Checklists-->
@@ -104,7 +105,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFE-9e-7yI">
-                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <rect key="frame" x="14" y="7" width="584" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="aWf-or-2pt"/>
                                                     </constraints>
@@ -117,10 +118,58 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="ZFE-9e-7yI" secondAttribute="trailing" constant="8" id="WFM-5R-3Zt"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZFE-9e-7yI" secondAttribute="trailing" constant="2" id="WFM-5R-3Zt"/>
                                                 <constraint firstItem="ZFE-9e-7yI" firstAttribute="top" secondItem="tUB-W0-nmm" secondAttribute="top" constant="7" id="uzh-Zk-D8m"/>
-                                                <constraint firstItem="ZFE-9e-7yI" firstAttribute="leading" secondItem="tUB-W0-nmm" secondAttribute="leading" constant="8" id="xMT-tb-dra"/>
+                                                <constraint firstItem="ZFE-9e-7yI" firstAttribute="leading" secondItem="tUB-W0-nmm" secondAttribute="leading" constant="14" id="xMT-tb-dra"/>
                                             </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="ZnO-9z-0WW">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="RTE-ss-S4C">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RTE-ss-S4C" id="di8-kv-oLl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remind Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azc-u9-fbj">
+                                                    <rect key="frame" x="14" y="11" width="88" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TtW-ap-FHN">
+                                                    <rect key="frame" x="540" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="shouldRemindToggled:" destination="mfr-2I-qq7" eventType="valueChanged" id="Apl-a1-7Sh"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TtW-ap-FHN" secondAttribute="trailing" constant="3" id="5lx-Lc-asN"/>
+                                                <constraint firstItem="TtW-ap-FHN" firstAttribute="top" secondItem="di8-kv-oLl" secondAttribute="topMargin" constant="-2" id="g5m-UT-DJ3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" textLabel="S5Q-PF-tys" detailTextLabel="hji-Xs-BBD" style="IBUITableViewCellStyleValue1" id="aFF-F1-ef6">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aFF-F1-ef6" id="oCb-bI-AjW">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S5Q-PF-tys">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hji-Xs-BBD">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -145,6 +194,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButton" destination="zgi-I7-hN0" id="9id-qI-cwn"/>
+                        <outlet property="dueDateLabel" destination="hji-Xs-BBD" id="YAO-jw-b0r"/>
+                        <outlet property="shouldRemindSwitch" destination="TtW-ap-FHN" id="PyN-xM-yY6"/>
                         <outlet property="textField" destination="ZFE-9e-7yI" id="WgV-WS-WPu"/>
                     </connections>
                 </tableViewController>
@@ -169,7 +220,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the list" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CTa-OY-lXx">
-                                                    <rect key="frame" x="8" y="13" width="584" height="21"/>
+                                                    <rect key="frame" x="14" y="13" width="584" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
@@ -179,8 +230,8 @@
                                                 </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="CTa-OY-lXx" secondAttribute="trailing" constant="8" id="Gmt-rO-1Xh"/>
-                                                <constraint firstItem="CTa-OY-lXx" firstAttribute="leading" secondItem="tcI-pn-J8z" secondAttribute="leading" constant="8" id="ROr-pZ-dUy"/>
+                                                <constraint firstAttribute="trailing" secondItem="CTa-OY-lXx" secondAttribute="trailing" constant="2" id="Gmt-rO-1Xh"/>
+                                                <constraint firstItem="CTa-OY-lXx" firstAttribute="leading" secondItem="tcI-pn-J8z" secondAttribute="leading" constant="14" id="ROr-pZ-dUy"/>
                                                 <constraint firstItem="CTa-OY-lXx" firstAttribute="top" secondItem="tcI-pn-J8z" secondAttribute="top" constant="13" id="tSf-XS-NWy"/>
                                             </constraints>
                                         </tableViewCellContentView>

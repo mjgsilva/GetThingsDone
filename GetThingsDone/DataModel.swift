@@ -11,6 +11,12 @@ import Foundation
 class DataModel {
     var lists = [Checklist]()
     
+    init() {
+        loadChecklists()
+        registerDefaults()
+        handleFirstTime()
+    }
+    
     var indexOfSelectedChecklist: Int {
         get {
             return NSUserDefaults.standardUserDefaults().integerForKey("ChecklistIndex")
@@ -22,10 +28,12 @@ class DataModel {
         }
     }
     
-    init() {
-        loadChecklists()
-        registerDefaults()
-        handleFirstTime()
+    class func nextChecklistItemID() -> Int {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let itemID = userDefaults.integerForKey("ChecklistItemID")
+        userDefaults.setInteger(itemID + 1, forKey: "ChecklistItemID")
+        userDefaults.synchronize()
+        return itemID
     }
 
     func documentsDirectory() -> String {
@@ -58,7 +66,7 @@ class DataModel {
     }
     
     func registerDefaults() {
-        let dictionary = [ "ChecklistIndex": -1, "firstTime": true ]
+        let dictionary = [ "ChecklistIndex": -1, "FirstTime": true, "ChecklistItemID": 0 ]
         NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
     }
     
